@@ -114,7 +114,7 @@ HANDLE GetBLEHandle(__in GUID AGuid)
       if (!SetupDiGetDeviceInterfaceDetail(hDI, &did, pInterfaceDetailData, size, &size, &dd))
         break;
 
-      std::wstring aaaa(L"\\\\?\\bthledevice#{00001812-0000-1000-8000-00805f9b34fb}_dev_vid&011209_pid&4321_rev&0001_ab89674511ff#8&25d559ee&2e&0019#{00001812-0000-1000-8000-00805f9b34fb}");
+      //std::wstring aaaa(L"\\\\?\\bthledevice#{00001812-0000-1000-8000-00805f9b34fb}_dev_vid&011209_pid&4321_rev&0001_ab89674511ff#8&25d559ee&2e&0019#{00001812-0000-1000-8000-00805f9b34fb}");
       hComm = CreateFile(
         pInterfaceDetailData->DevicePath,
         GENERIC_READ | GENERIC_WRITE,
